@@ -4,118 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio Professionnel</title>
-    <style>
-        /* Styles de base pour le corps du document */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        /* Styles pour l'en-tête */
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        /* Styles pour la navigation */
-        nav ul {
-            padding: 0;
-            list-style-type: none;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #3498db;
-        }
-
-        /* Styles pour le contenu principal */
-        .container {
-            width: 80%;
-            margin: 80px auto 0; /* Ajusté pour tenir compte de l'en-tête fixe */
-            padding: 20px;
-            background-color: #ffffff; /* Fond blanc uniforme pour tout le contenu */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        /* Styles pour les sections */
-        section {
-            padding: 40px 0; /* Espacement vertical entre les sections */
-            border-bottom: 1px solid #eee; /* Ligne fine pour séparer visuellement les sections */
-        }
-        section:last-child {
-            border-bottom: none; /* Pas de bordure pour la dernière section */
-        }
-
-        /* Styles pour les projets */
-        .project {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #f9f9f9; /* Légère différence de couleur pour les projets */
-            border-radius: 5px;
-        }
-        .project img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        /* Styles pour le formulaire de contact */
-        form {
-            display: grid;
-            gap: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-
-        /* Styles pour le pied de page */
-        footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 20px;
-        }
-    </style>
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- En-tête avec navigation -->
+    <!-- En-tête du site avec navigation -->
     <header>
+        <!-- Logo du portfolio -->
+        <img src="images/logo.png" alt="Logo de mon portfolio" class="logo">
         <h1>Mon Portfolio</h1>
+        <!-- Menu de navigation -->
         <nav>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
@@ -123,11 +21,13 @@
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!-- Lien vers la page CV -->
+                <li><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Contenu principal -->
+    <!-- Contenu principal du site -->
     <main class="container">
         <!-- Section d'accueil -->
         <section id="accueil">
@@ -154,29 +54,22 @@
             </ul>
         </section>
 
-        <!-- Section des projets -->
+        <!-- Section Projets -->
         <section id="projets">
             <h2>Mes Projets</h2>
+            <!-- Exemple de projet -->
             <div class="project">
                 <h3>Projet 1: Site E-commerce</h3>
-                <img src="/placeholder.svg?height=200&width=300" alt="Projet E-commerce">
+                <img src="images/projet-ecommerce.jpg" alt="Capture d'écran du site e-commerce">
                 <p>Développement d'une plateforme e-commerce complète utilisant React pour le frontend et Node.js pour le backend. Intégration de paiements sécurisés et d'un système de gestion des stocks en temps réel.</p>
             </div>
-            <div class="project">
-                <h3>Projet 2: Application de Gestion de Tâches</h3>
-                <img src="/placeholder.svg?height=200&width=300" alt="Application de Gestion de Tâches">
-                <p>Création d'une application web de gestion de tâches avec authentification des utilisateurs, listes de tâches partagées et notifications en temps réel.</p>
-            </div>
-            <div class="project">
-                <h3>Projet 3: Blog Personnel</h3>
-                <img src="/placeholder.svg?height=200&width=300" alt="Blog Personnel">
-                <p>Conception et développement d'un blog personnel avec un système de gestion de contenu personnalisé, optimisé pour le SEO et intégrant des analyses de trafic.</p>
-            </div>
+            <!-- Ajoutez d'autres projets ici -->
         </section>
 
-        <!-- Section de contact avec formulaire -->
+        <!-- Section Contact -->
         <section id="contact">
             <h2>Contactez-moi</h2>
+            <!-- Formulaire de contact -->
             <form id="contact-form">
                 <input type="text" id="name" name="name" placeholder="Votre nom" required>
                 <input type="email" id="email" name="email" placeholder="Votre email" required>
@@ -184,6 +77,7 @@
                 <button type="submit">Envoyer</button>
             </form>
             <p>Ou contactez-moi directement à : <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
+            <!-- Liens vers les réseaux sociaux -->
             <div id="social-links">
                 <a href="https://github.com/votre-username" target="_blank">GitHub</a> |
                 <a href="https://linkedin.com/in/votre-profil" target="_blank">LinkedIn</a>
@@ -191,50 +85,12 @@
         </section>
     </main>
 
+    <!-- Pied de page -->
     <footer>
         <p>&copy; 2024 [Votre Nom]. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        // Script pour gérer la soumission du formulaire
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre message ! Je vous répondrai bientôt.');
-            this.reset();
-        });
-
-        // Script pour l'effet de défilement fluide
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                const headerOffset = 70;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Script pour mettre en surbrillance la section active dans la navigation
-        window.addEventListener('scroll', function() {
-            let scrollPosition = window.scrollY;
-
-            document.querySelectorAll('section').forEach(section => {
-                if (scrollPosition >= section.offsetTop - 100) {
-                    document.querySelectorAll('nav a').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').substring(1) === section.id) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

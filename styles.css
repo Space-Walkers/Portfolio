@@ -1,1 +1,141 @@
- 
+ /* Styles de base pour le corps du document */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Style pour le logo */
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Styles pour la navigation */
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Style pour le lien actif dans la navigation */
+nav ul li a.active {
+    color: #3498db;
+}
+
+/* Styles pour le contenu principal */
+.container {
+    width: 80%;
+    margin: 80px auto 0; /* Marge supérieure pour éviter le chevauchement avec l'en-tête fixe */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Styles pour les sections */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+section:last-child {
+    border-bottom: none;
+}
+
+/* Styles pour les projets */
+.project {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.project img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Styles pour le formulaire de contact */
+form {
+    display: grid;
+    gap: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+/* Styles spécifiques pour la page CV */
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-item {
+    margin-bottom: 20px;
+}
+
+.cv-item h4 {
+    margin-bottom: 5px;
+}
+
+.cv-item .date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cv-item ul {
+    padding-left: 20px;
+}
