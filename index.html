@@ -3,24 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio Professionnel</title>
+    <title>Romain Royer - Portfolio Développeur Web</title>
+    <meta name="description" content="Portfolio de Romain Royer, développeur web passionné par la création d'expériences numériques innovantes. Découvrez mes projets et compétences.">
+    <meta name="keywords" content="développeur web, portfolio, React, JavaScript, CSS, HTML, Node.js">
+    <meta name="author" content="Romain Royer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spacewalker7.github.io/portfolio/">
+    <meta property="og:title" content="Romain Royer - Portfolio Développeur Web">
+    <meta property="og:description" content="Portfolio de Romain Royer, développeur web passionné par la création d'expériences numériques innovantes.">
+    <meta property="og:image" content="images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spacewalker7.github.io/portfolio/">
+    <meta property="twitter:title" content="Romain Royer - Portfolio Développeur Web">
+    <meta property="twitter:description" content="Portfolio de Romain Royer, développeur web passionné par la création d'expériences numériques innovantes.">
+    <meta property="twitter:image" content="images/logo.png">
+    
     <!-- Lien vers la feuille de style CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload des polices -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="script.js" as="script">
 </head>
 <body>
+    <!-- Lien d'accessibilité pour passer la navigation -->
+    <a href="#accueil" class="skip-link">Aller au contenu principal</a>
+    
     <!-- En-tête du site avec navigation -->
     <header>
         <!-- Logo du portfolio -->
-        <img src="images/logo.png" alt="Logo de mon portfolio" class="logo">
-        <h1>Mon Portfolio</h1>
+        <div class="header-content">
+            <!-- Emoji moderne pour le logo -->
+            <div class="logo-emoji">🚀</div>
+            <h1>Mon Portfolio</h1>
+        </div>
         <!-- Menu de navigation -->
         <nav>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#a-propos">À Propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <!-- Lien vers la page CV -->
                 <li><a href="cv.html">CV</a></li>
             </ul>
@@ -29,58 +57,135 @@
 
     <!-- Contenu principal du site -->
     <main class="container">
-        <!-- Section d'accueil -->
-        <section id="accueil">
-            <h2>Bienvenue sur mon portfolio</h2>
-            <p>Je suis SpaceWalkers, un développeur web passionné par la création d'expériences numériques innovantes.</p>
-        </section>
-
-        <!-- Section À Propos -->
-        <section id="a-propos">
-            <h2>À Propos de Moi</h2>
-            <p>Avec 200 années d'expérience dans le développement web, je suis spécialisé dans gestion des sites web. Ma passion pour l'apprentissage continu et l'innovation me pousse à rester à jour avec les dernières technologies.</p>
-        </section>
-
-        <!-- Section Compétences -->
-        <section id="competences">
-            <h2>Mes Compétences</h2>
-            <ul>
-                <li>HTML5 / CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>Python</li>
-                <li>SQL / NoSQL Databases</li>
-            </ul>
-        </section>
-
-        <!-- Section Projets -->
-        <section id="projets">
-            <h2>Mes Projets</h2>
-            <!-- Exemple de projet -->
-            <div class="project">
-                <h3>Projet 1: Site E-commerce</h3>
-                <img src="images/projet-ecommerce.jpg" alt="Capture d'écran du site e-commerce">
-                <p>Développement d'une plateforme e-commerce complète utilisant React pour le frontend et Node.js pour le backend. Intégration de paiements sécurisés et d'un système de gestion des stocks en temps réel.</p>
+        <!-- Section Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Romain Royer</h1>
+                    <h2>Développeur Web Passionné</h2>
+                    <p>Je crée des expériences numériques modernes et innovantes. Spécialisé dans le développement web full-stack, je transforme vos idées en solutions technologiques performantes.</p>
+                    <div class="hero-buttons">
+                        <a href="projets.html" class="btn-primary">Voir mes projets</a>
+                        <a href="contact.html" class="btn-secondary">Me contacter</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar">
+                        <div class="avatar-placeholder">
+                            <span class="avatar-icon">👨‍💻</span>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-element element-1">💻</div>
+                            <div class="floating-element element-2">⚡</div>
+                            <div class="floating-element element-3">🚀</div>
+                            <div class="floating-element element-4">🎨</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Ajoutez d'autres projets ici -->
         </section>
 
-        <!-- Section Contact -->
-        <section id="contact">
-            <h2>Contactez-moi</h2>
-            <!-- Formulaire de contact -->
-            <form id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-            <p>Ou contactez-moi directement à : <a href="mailto:romain.royer1234@gmail.com">romain.royer1234@gmail.com</a></p>
-            <!-- Liens vers les réseaux sociaux -->
-            <div id="social-links">
-                <a href="https://github.com/votre-username" target="_blank">GitHub</a> |
-                <a href="https://linkedin.com/in/votre-profil" target="_blank">LinkedIn</a>
+        <!-- Section Services -->
+        <section id="services" class="services-section">
+            <h2>Ce que je peux faire pour vous</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Développement Web</h3>
+                    <p>Sites web modernes et responsives avec les dernières technologies</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Applications Web</h3>
+                    <p>Applications web interactives et dynamiques pour tous vos besoins</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>E-commerce</h3>
+                    <p>Boutiques en ligne complètes avec systèmes de paiement sécurisés</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance</h3>
+                    <p>Maintenance et mise à jour de vos sites web existants</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Technologies -->
+        <section id="technologies" class="tech-section">
+            <h2>Technologies que j'utilise</h2>
+            <div class="tech-showcase">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Outils</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets en vedette -->
+        <section id="featured-projects" class="featured-section">
+            <h2>Projets en vedette</h2>
+            <div class="featured-projects">
+                <div class="featured-project">
+                    <div class="project-preview">
+                        <div class="project-image-placeholder">
+                            🛒 E-commerce
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Site E-commerce Moderne</h3>
+                        <p>Plateforme complète avec React et Node.js</p>
+                        <a href="projets.html" class="btn-outline">Voir tous les projets</a>
+                    </div>
+                </div>
+                <div class="featured-project">
+                    <div class="project-preview">
+                        <div class="project-image-placeholder">
+                            💻 Application Web
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Application Web Interactive</h3>
+                        <p>Interface moderne avec animations CSS</p>
+                        <a href="projets.html" class="btn-outline">Voir tous les projets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Call-to-Action -->
+        <section id="cta" class="cta-section">
+            <div class="cta-content">
+                <h2>Prêt à démarrer votre projet ?</h2>
+                <p>Discutons de vos besoins et créons ensemble quelque chose d'extraordinaire</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary large">Commencer un projet</a>
+                    <a href="cv.html" class="btn-secondary large">Télécharger mon CV</a>
+                </div>
             </div>
         </section>
     </main>
@@ -91,6 +196,6 @@
     </footer>
 
     <!-- Lien vers le fichier JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

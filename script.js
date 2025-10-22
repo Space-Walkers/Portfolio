@@ -45,14 +45,82 @@ function setActiveNavLink() {
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll('nav ul li a');
     
+    // Nettoyer tous les états actifs
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+        link.classList.remove('active');
+    });
+    
+    // Définir le lien actif selon la page courante
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Gestion spéciale pour la page d'accueil
+        if (currentPage === '' || currentPage === 'index.html' || currentPage === 'Portfolio') {
+            if (href === 'index.html' || href === '#accueil') {
+                link.classList.add('active');
+            }
+        } else if (href === currentPage) {
             link.classList.add('active');
-        } else {
-            link.classList.remove('active');
         }
     });
 }
 
 // Appeler la fonction au chargement de la page
 document.addEventListener('DOMContentLoaded', setActiveNavLink);
+
+// Effet de scroll sur l'en-tête
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Animation d'apparition des éléments au scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observer les sections pour l'animation
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+});
+
+// Effet de parallaxe léger sur les projets
+document.addEventListener('scroll', function() {
+    const projects = document.querySelectorAll('.project');
+    const scrolled = window.pageYOffset;
+    
+    projects.forEach((project, index) => {
+        const speed = 0.1 + (index * 0.05);
+        const yPos = -(scrolled * speed);
+        project.style.transform = `translateY(${yPos}px)`;
+    });
+});
+
+// Animation des compétences au survol
+document.addEventListener('DOMContentLoaded', function() {
+    const skills = document.querySelectorAll('#competences li');
+    skills.forEach((skill, index) => {
+        skill.style.animationDelay = `${index * 0.1}s`;
+        skill.classList.add('animate-in');
+    });
+});

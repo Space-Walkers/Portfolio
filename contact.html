@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Romain Royer | Portfolio Développeur Web</title>
+    <meta name="description" content="Contactez Romain Royer pour vos projets de développement web. Formulaire de contact et informations de contact.">
+    <meta name="keywords" content="contact, développeur web, projets, collaboration, Romain Royer">
+    <meta name="author" content="Romain Royer">
+    
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload des polices -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <!-- Lien d'accessibilité pour passer la navigation -->
+    <a href="#contact" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- En-tête du site avec navigation -->
+    <header>
+        <!-- Logo du portfolio -->
+        <img src="images/logo.png" alt="Logo de mon portfolio" class="logo" loading="eager">
+        <h1>Contact</h1>
+        <!-- Menu de navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal du site -->
+    <main class="container">
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <p class="section-intro">Vous avez un projet en tête ? N'hésitez pas à me contacter pour discuter de vos besoins en développement web.</p>
+            
+            <div class="contact-content">
+                <!-- Formulaire de contact -->
+                <div class="contact-form-section">
+                    <h3>Envoyez-moi un message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Sujet de votre message">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande..." required rows="5"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:romain.royer1234@gmail.com">romain.royer1234@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://linkedin.com/in/romain-royer" target="_blank" rel="noopener">linkedin.com/in/romain-royer</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/SpaceWalker7" target="_blank" rel="noopener">github.com/SpaceWalker7</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h4>Disponibilité</h4>
+                            <p>Réponse sous 24h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services proposés -->
+            <div class="services-section">
+                <h3>Services que je propose</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">🌐</div>
+                        <h4>Développement Web</h4>
+                        <p>Sites web modernes et responsives</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <h4>Applications Web</h4>
+                        <p>Applications web interactives et dynamiques</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🛒</div>
+                        <h4>E-commerce</h4>
+                        <p>Boutiques en ligne complètes</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🔧</div>
+                        <h4>Maintenance</h4>
+                        <p>Maintenance et mise à jour de sites existants</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Romain Royer. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>

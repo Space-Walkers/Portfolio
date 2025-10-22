@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV - Portfolio Professionnel</title>
+    <title>CV - Romain Royer | Portfolio Développeur Web</title>
+    <meta name="description" content="CV de Romain Royer, développeur web. Découvrez mon parcours professionnel et mes compétences techniques.">
+    
     <!-- Lien vers la feuille de style CSS (la même que pour la page d'accueil) -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,7 +13,22 @@
     <!-- En-tête du site avec navigation -->
     <header>
         <!-- Logo du portfolio -->
-        <img src="images/logo.png" alt="Logo de mon portfolio" class="logo">
+        <div class="logo-svg">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="28" fill="url(#logoGradient)" stroke="#6366f1" stroke-width="2"/>
+                <text x="30" y="38" font-family="Inter, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="white">RR</text>
+                <circle cx="15" cy="15" r="2" fill="#06b6d4" opacity="0.8"/>
+                <circle cx="45" cy="15" r="2" fill="#ec4899" opacity="0.8"/>
+                <circle cx="15" cy="45" r="2" fill="#10b981" opacity="0.8"/>
+                <circle cx="45" cy="45" r="2" fill="#f59e0b" opacity="0.8"/>
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
         <h1>Mon CV</h1>
         <!-- Menu de navigation -->
         <nav>
@@ -26,66 +43,23 @@
         </nav>
     </header>
 
-    <!-- Contenu principal de la page CV -->
-    <main class="container">
-        <section id="cv">
-            <h2>Mon Parcours Professionnel</h2>
-            
-            <!-- Section Expérience Professionnelle -->
-            <div class="cv-section">
-                <h3>Expérience Professionnelle</h3>
-                <div class="cv-item">
-                    <h4>Développeur Web Senior - Entreprise XYZ</h4>
-                    <p class="date">Janvier 2020 - Présent</p>
-                    <ul>
-                        <li>Développement et maintenance d'applications web complexes</li>
-                        <li>Leadership technique sur des projets d'envergure</li>
-                        <li>Formation et mentorat des développeurs juniors</li>
-                    </ul>
-                </div>
-                <!-- Ajoutez d'autres expériences professionnelles ici -->
-            </div>
-
-            <!-- Section Formation -->
-            <div class="cv-section">
-                <h3>Formation</h3>
-                <div class="cv-item">
-                    <h4>Master en Informatique - Université ABC</h4>
-                    <p class="date">2015 - 2017</p>
-                    <p>Spécialisation en Développement Web et Mobile</p>
-                </div>
-                <!-- Ajoutez d'autres formations ici -->
-            </div>
-
-            <!-- Section Compétences Techniques -->
-            <div class="cv-section">
-                <h3>Compétences Techniques</h3>
-                <ul>
-                    <li>Langages de programmation : JavaScript, Python, PHP</li>
-                    <li>Frameworks : React, Vue.js, Node.js, Django</li>
-                    <li>Bases de données : MySQL, MongoDB, PostgreSQL</li>
-                    <li>Outils : Git, Docker, Jenkins, AWS</li>
-                </ul>
-            </div>
-
-            <!-- Section Langues -->
-            <div class="cv-section">
-                <h3>Langues</h3>
-                <ul>
-                    <li>Français (langue maternelle)</li>
-                    <li>Anglais (courant)</li>
-                    <li>Espagnol (intermédiaire)</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <section id="cv">
+        <h2>Mon Parcours Professionnel</h2>
+        
+        <!-- Affichage du PDF directement sur la page -->
+        <iframe src="docs/cv.pdf" width="100%" height="600px" title="CV de Romain" loading="lazy"></iframe>
+        
+        <!-- Lien pour télécharger le PDF -->
+        <p>Vous pouvez également <a href="docs/cv.pdf" download="CV_Romain">télécharger mon CV en PDF</a>.</p>
+    </section>
+    
 
     <!-- Pied de page -->
     <footer>
-        <p>&copy; 2024 [Votre Nom]. Tous droits réservés.</p>
+        <p>&copy; 2024 SpaceWalker. Tous droits réservés.</p>
     </footer>
 
     <!-- Lien vers le fichier JavaScript (le même que pour la page d'accueil) -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

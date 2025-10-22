@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Compétences - Romain Royer | Portfolio Développeur Web</title>
+    <meta name="description" content="Compétences techniques de Romain Royer : HTML5, CSS3, JavaScript, React, Node.js, Python et plus encore.">
+    <meta name="keywords" content="compétences, développeur web, HTML, CSS, JavaScript, React, Node.js">
+    <meta name="author" content="Romain Royer">
+    
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload des polices -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <!-- Lien d'accessibilité pour passer la navigation -->
+    <a href="#competences" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- En-tête du site avec navigation -->
+    <header>
+        <!-- Logo du portfolio -->
+        <img src="images/logo.png" alt="Logo de mon portfolio" class="logo" loading="eager">
+        <h1>Mes Compétences</h1>
+        <!-- Menu de navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="competences.html" class="active">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal du site -->
+    <main class="container">
+        <!-- Section Compétences -->
+        <section id="competences">
+            <h2>Mes Compétences Techniques</h2>
+            <p class="section-intro">Découvrez les technologies et outils que je maîtrise pour créer des solutions web modernes et performantes.</p>
+            
+            <!-- Compétences Frontend -->
+            <div class="skills-category">
+                <h3>Frontend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">🌐</div>
+                        <h4>HTML5</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="90"></div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🎨</div>
+                        <h4>CSS3</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="85"></div>
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⚡</div>
+                        <h4>JavaScript (ES6+)</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="80"></div>
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⚛️</div>
+                        <h4>React.js</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="75"></div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compétences Backend -->
+            <div class="skills-category">
+                <h3>Backend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">🟢</div>
+                        <h4>Node.js</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="70"></div>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🐍</div>
+                        <h4>Python</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="65"></div>
+                            <span>65%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🗄️</div>
+                        <h4>SQL / NoSQL</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="75"></div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔧</div>
+                        <h4>API REST</h4>
+                        <div class="skill-level">
+                            <div class="skill-bar" data-level="80"></div>
+                            <span>80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outils et Technologies -->
+            <div class="skills-category">
+                <h3>Outils & Technologies</h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <div class="tool-icon">📦</div>
+                        <h4>Git & GitHub</h4>
+                        <p>Gestion de versions et collaboration</p>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">🐳</div>
+                        <h4>Docker</h4>
+                        <p>Conteneurisation d'applications</p>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">☁️</div>
+                        <h4>Cloud Services</h4>
+                        <p>AWS, Vercel, Netlify</p>
+                    </div>
+                    <div class="tool-item">
+                        <div class="tool-icon">📱</div>
+                        <h4>Responsive Design</h4>
+                        <p>Mobile-first approach</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications">
+                <h3>Certifications & Formations</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <h4>Développement Web Full-Stack</h4>
+                        <p>Formation complète en développement web moderne</p>
+                        <span class="cert-date">2024</span>
+                    </div>
+                    <div class="cert-item">
+                        <h4>JavaScript Avancé</h4>
+                        <p>Maîtrise des concepts avancés de JavaScript</p>
+                        <span class="cert-date">2023</span>
+                    </div>
+                    <div class="cert-item">
+                        <h4>React Developer</h4>
+                        <p>Spécialisation en développement React</p>
+                        <span class="cert-date">2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Romain Royer. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
